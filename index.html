@@ -1,22 +1,30 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Page</title> <!-- Poor title -->
   <meta charset="utf-8">
-  <!-- Missing description, keywords, Open Graph, etc. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Site</title>
+  <meta name="description" content="Explore our site for the latest updates and information.">
   <style>
-    body { background: white; font-size: 10px; }
-    h1 { color: grey; display: none; } <!-- Hidden heading -->
+    body { background: white; font-size: 16px; }
+    h1 { color: grey; }
   </style>
 </head>
 <body>
-  <img src="image.jpg"> <!-- Missing alt text -->
-  <a href="https://example.com">Click</a> <!-- Generic link text -->
+  <header>
+    <h1>Welcome to My Site</h1>
+  </header>
+  <main>
+    <img src="image.jpg" alt="Description of the image" width="600" height="400">
+    <a href="https://example.com">Visit Example</a>
+    <div>This is a test.</div>
+  </main>
   <script>
-    // Render important content with JS
-    document.write('<h1>Welcome to my site</h1>');
+    // Avoid using document.write
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('header');
+      header.style.display = 'block';
+    });
   </script>
-  <div>This is a test.</div>
 </body>
 </html>
